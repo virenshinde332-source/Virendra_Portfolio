@@ -4,44 +4,82 @@
     VS
   </div>
 
-  <ul>
+  <!-- Desktop Menu -->
 
- <li> <a
-    href="#hero"
-    [class.active]="activeSection === 'hero'">
-    Home
-  </a> </li>
+  <ul class="nav-links">
 
-  <li> <a
-    href="#about"
-    [class.active]="activeSection === 'about'">
-    About
-  </a> </li>
+    <li>
+      <a href="#hero"
+         [class.active]="activeSection === 'hero'">
+         Home
+      </a>
+    </li>
 
-  <li> <a
-    href="#skills"
-    [class.active]="activeSection === 'skills'">
-    Skills
-  </a> </li>  
+    <li>
+      <a href="#about"
+         [class.active]="activeSection === 'about'">
+         About
+      </a>
+    </li>
 
-  <li> <a
-    href="#projects"
-    [class.active]="activeSection === 'projects'">
-    Projects
-  </a> </li>
+    <li>
+      <a href="#skills"
+         [class.active]="activeSection === 'skills'">
+         Skills
+      </a>
+    </li>
 
-  <li> <a
-    href="#timeline"
-    [class.active]="activeSection === 'timeline'">
-    Journey
-  </a> </li>  
+    <li>
+      <a href="#projects"
+         [class.active]="activeSection === 'projects'">
+         Projects
+      </a>
+    </li>
 
-  <li> <a
-    href="#contact"
-    [class.active]="activeSection === 'contact'">
-    Contact
-  </a> </li>
+    <li>
+      <a href="#timeline"
+         [class.active]="activeSection === 'timeline'">
+         Journey
+      </a>
+    </li>
+
+    <li>
+      <a href="#contact"
+         [class.active]="activeSection === 'contact'">
+         Contact
+      </a>
+    </li>
 
   </ul>
 
+  <!-- Mobile Menu Button -->
+
+  <div
+    class="menu-btn"
+    (click)="toggleMenu()">
+
+    {{ mobileMenuOpen ? '✕' : '☰' }}
+
+  </div>
+
 </nav>
+
+<!-- Mobile Drawer -->
+
+<div
+  class="mobile-menu"
+  [class.active]="mobileMenuOpen">
+
+  <a href="#hero" (click)="toggleMenu()">Home</a>
+
+  <a href="#about" (click)="toggleMenu()">About</a>
+
+  <a href="#skills" (click)="toggleMenu()">Skills</a>
+
+  <a href="#projects" (click)="toggleMenu()">Projects</a>
+
+  <a href="#timeline" (click)="toggleMenu()">Journey</a>
+
+  <a href="#contact" (click)="toggleMenu()">Contact</a>
+
+</div>

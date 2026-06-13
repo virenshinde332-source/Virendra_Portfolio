@@ -267,8 +267,19 @@ p {
   .floating {
     display: none;
   }
+   .typing-container{
+
+    font-size:1rem;
+
+    white-space:normal;
+  }
 }
 .typing-container {
+  max-width:100%;
+
+  overflow:hidden;
+
+  text-overflow:ellipsis;
 
   min-height: 60px;
 

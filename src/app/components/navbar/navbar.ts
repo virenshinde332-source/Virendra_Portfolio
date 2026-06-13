@@ -10,7 +10,14 @@ import {
 })
 export class Navbar {
 
-  activeSection = 'Hero';
+   mobileMenuOpen = false;
+
+  toggleMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+
+  activeSection = 'hero';
 
   @HostListener('window:scroll')
   onScroll() {
