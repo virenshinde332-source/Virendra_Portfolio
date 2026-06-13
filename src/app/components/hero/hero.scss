@@ -1,0 +1,306 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  overflow: hidden;
+
+  background: linear-gradient(
+    -45deg,
+    #0f172a,
+    #1e293b,
+    #0ea5e9,
+    #8b5cf6
+  );
+
+  background-size: 400% 400%;
+
+  animation: gradientBG 12s ease infinite;
+}
+
+.content {
+  z-index: 2;
+  animation: fadeUp 1.2s ease;
+  padding: 20px;
+}
+
+h4 {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #8b5cf6
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 10px rgba(56, 189, 248, 0.5),
+    0 0 30px rgba(56, 189, 248, 0.4),
+    0 0 60px rgba(56, 189, 248, 0.3);
+}
+
+h2 {
+  color: #cbd5e1;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+p {
+  max-width: 700px;
+  margin: auto;
+  color: #94a3b8;
+  line-height: 1.8;
+}
+
+.buttons {
+
+  margin-top: 40px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.buttons a {
+
+  text-decoration: none;
+}
+
+.buttons button {
+
+  padding: 15px 35px;
+
+  border: none;
+
+  border-radius: 40px;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+
+.buttons button:hover {
+
+  transform: translateY(-5px);
+}
+
+/* Primary Button */
+
+.primary-btn {
+
+  background: #38bdf8;
+
+  color: white;
+}
+
+.primary-btn:hover {
+
+  box-shadow:
+    0 0 20px #38bdf8,
+    0 0 40px #38bdf8;
+}
+
+/* Resume Button */
+
+.outline-btn {
+
+  background: transparent;
+
+  color: white;
+
+  border: 2px solid #38bdf8;
+}
+
+.outline-btn:hover {
+
+  background:
+    linear-gradient(
+      135deg,
+      #38bdf8,
+      #8b5cf6
+    );
+
+  border-color: transparent;
+
+  box-shadow:
+    0 0 20px #38bdf8,
+    0 0 40px #8b5cf6;
+}
+.outline {
+  background: transparent;
+  color: white;
+
+  border: 2px solid #38bdf8;
+}
+
+.outline:hover {
+  box-shadow: 0 0 30px #38bdf8;
+}
+
+/* Floating Tech Tags */
+
+.floating {
+  position: absolute;
+
+  padding: 12px 22px;
+
+  background: rgba(255,255,255,.08);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,.1);
+
+  border-radius: 30px;
+
+  color: white;
+  font-weight: 500;
+
+  animation: float 4s ease-in-out infinite;
+}
+
+.html {
+  top: 20%;
+  left: 10%;
+}
+
+.css {
+  top: 70%;
+  left: 15%;
+}
+
+.angular {
+  top: 25%;
+  right: 10%;
+}
+
+.java {
+  top: 70%;
+  right: 15%;
+}
+
+/* Floating Animation */
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Fade Animation */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gradient Animation */
+
+@keyframes gradientBG {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .floating {
+    display: none;
+  }
+}
+.typing-container {
+
+  min-height: 60px;
+
+  font-size: 2rem;
+
+  font-weight: 600;
+
+  color: #38bdf8;
+
+  text-shadow:
+    0 0 10px rgba(56,189,248,.5);
+
+  margin-bottom: 20px;
+
+}
+
+.cursor {
+
+  display: inline-block;
+
+  color: #38bdf8;
+
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+
+  0%,100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
